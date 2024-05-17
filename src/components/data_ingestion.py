@@ -3,11 +3,12 @@ import sys
 from src.logger import logging
 from src.exception import CustomException
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 import sqlite3
 
-# from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformation
 # from src.components.model_trainer import ModelTrainer
 
 @dataclass
@@ -28,8 +29,11 @@ class DataIngestion:
             df = pd.read_sql_query("SELECT * FROM Player_Attributes", cnx)
             logging.info('Dataset read as pandas Dataframe')
             
-            ## No need to do data manipulation
+            ## Unwanted columns can be deleted here
+            df = df.drop(['id', 'date'], axis=1)
             
+            # Convert all None values to np.nan
+            df = df.where(pd.notnull(df), np.nan)
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False)
             logging.info('Train test split')
@@ -53,7 +57,7 @@ class DataIngestion:
 if __name__ == "__main__":
     obj = DataIngestion()
     train_data_path, test_data_path = obj.initiate_data_ingestion()
-    # data_transformation = DataTransformation()
-    # train_arr, test_arr, preprocessor_obj_file_path, = data_transformation.initaite_data_transformation(train_data_path,test_data_path)
+    data_transformation = DataTransformation()
+    train_arr, test_arr, preprocessor_obj_file_path, = data_transformation.initaite_data_transformation(train_data_path,test_data_path)
     # model_trainer = ModelTrainer()
     # model_trainer.initiate_model_training(train_arr, test_arr)
