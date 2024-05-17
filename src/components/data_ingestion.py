@@ -9,7 +9,7 @@ from dataclasses import dataclass
 import sqlite3
 
 from src.components.data_transformation import DataTransformation
-# from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainer
 
 @dataclass
 class DataIngestionconfig:
@@ -34,6 +34,7 @@ class DataIngestion:
             
             # Convert all None values to np.nan
             df = df.where(pd.notnull(df), np.nan)
+            df = df.dropna(subset=['overall_rating'])
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False)
             logging.info('Train test split')
@@ -59,5 +60,5 @@ if __name__ == "__main__":
     train_data_path, test_data_path = obj.initiate_data_ingestion()
     data_transformation = DataTransformation()
     train_arr, test_arr, preprocessor_obj_file_path, = data_transformation.initaite_data_transformation(train_data_path,test_data_path)
-    # model_trainer = ModelTrainer()
-    # model_trainer.initiate_model_training(train_arr, test_arr)
+    model_trainer = ModelTrainer()
+    model_trainer.initiate_model_training(train_arr, test_arr)

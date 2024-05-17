@@ -59,21 +59,20 @@ class DataTransformation:
             input_feature_train_arr = pd.DataFrame()
             input_feature_test_arr = pd.DataFrame()
             
-            
             l_imputer = SimpleImputer(strategy='most_frequent')
             input_feature_train_arr[categorical_features] = l_imputer.fit_transform(input_feature_train_df[categorical_features])
             preprocessing_data['categorical_imputer'] = l_imputer
             # Fit and transform the categorical columns
             for column in categorical_features:
                 l_encoder = LabelEncoder()
-                input_feature_train_arr[column] = l_encoder.fit_transform(input_feature_train_df[column])
+                input_feature_train_arr[column] = l_encoder.fit_transform(input_feature_train_arr[column])
                 preprocessing_data[f'{column}_label_encoder'] = l_encoder
 
             # Fit and transform the numerical columns
             imputer = SimpleImputer(strategy='median')
             scaler = StandardScaler()
             input_feature_train_arr[numerical_features] = imputer.fit_transform(input_feature_train_df[numerical_features])
-            input_feature_train_arr[numerical_features] = scaler.fit_transform(input_feature_train_df[numerical_features])
+            input_feature_train_arr[numerical_features] = scaler.fit_transform(input_feature_train_arr[numerical_features])
             
             preprocessing_data['numerical_imputer'] = imputer
             preprocessing_data['numerical_scaler'] = scaler
@@ -81,18 +80,19 @@ class DataTransformation:
             logging.info("Completed fit-transform for Training Data")
             logging.info(f"Preprocessing Object is: {preprocessing_data}")
             
+            ## Transforming the test data
             l_imputer = preprocessing_data['categorical_imputer']
             input_feature_test_arr[categorical_features] = l_imputer.transform(input_feature_test_df[categorical_features])
             # Transform the categorical columns in the test data
             for column in categorical_features:
                 l_encoder = preprocessing_data[f'{column}_label_encoder']
-                input_feature_test_arr[column] = input_feature_test_df[column].map(lambda s: -1 if s not in l_encoder.classes_ else l_encoder.transform([s])[0])
+                input_feature_test_arr[column] = input_feature_test_arr[column].map(lambda s: -1 if s not in l_encoder.classes_ else l_encoder.transform([s])[0])
 
             imputer = preprocessing_data['numerical_imputer']
             scaler = preprocessing_data['numerical_scaler']
 
             input_feature_test_arr[numerical_features] = imputer.transform(input_feature_test_df[numerical_features])
-            input_feature_test_arr[numerical_features] = scaler.transform(input_feature_test_df[numerical_features])
+            input_feature_test_arr[numerical_features] = scaler.transform(input_feature_test_arr[numerical_features])
 
             logging.info("Completed transform for Testing Data")
 
