@@ -2,3 +2,7 @@
 # artifacts/
 logs/
 data/
+
+artifacts/raw.csv
+artifacts/test.csv
+artifacts/train.csv

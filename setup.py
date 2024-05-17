@@ -16,7 +16,7 @@ def get_requirements(file_path:str)->List[str]:
 
 
 setup(
-    name='ClassificationProject',
+    name='RegressionProject',
     version='0.0.1',
     author='sahil',
     author_email='sahilaggarwal.it20@gmail.com',
