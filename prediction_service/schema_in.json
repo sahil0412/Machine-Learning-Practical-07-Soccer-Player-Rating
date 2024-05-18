@@ -1,0 +1,155 @@
+{
+    "player_fifa_api_id": {
+        "min": 2,
+        "max": 234141.0
+    },
+    "player_api_id": {
+        "min": 2625.0,
+        "max": 750584.0
+    },
+    "potential": {
+        "min": 39.0	,
+        "max": 97
+    },
+    "crossing": {
+        "min": 1,
+        "max": 95
+    },
+    "finishing": {
+        "min": 1,
+        "max": 97.0
+    },
+    "heading_accuracy": {
+        "min": 1,
+        "max": 98
+    },
+    "short_passing": {
+        "min": 3,
+        "max": 97
+    },
+    "volleys": {
+        "min": 1,
+        "max": 93
+    },
+    "dribbling": {
+        "min": 1.00000,
+        "max": 97
+    },
+    "curve": {
+        "min": 2,
+        "max": 94
+    },
+    "free_kick_accuracy": {
+        "min": 1,
+        "max": 97
+    },
+    "long_passing": {
+        "min": 3,
+        "max": 97
+    },
+    "ball_control": {
+        "min": 5,
+        "max": 97
+    },
+    "acceleration": {
+        "min": 10,
+        "max": 97
+    },
+    "sprint_speed": {
+        "min": 12,
+        "max": 97
+    },
+    "agility": {
+        "min": 11,
+        "max": 96
+    },
+    "reactions": {
+        "min": 17,
+        "max": 96
+    },
+    "balance": {
+        "min": 12,
+        "max": 96
+    },
+    "shot_power": {
+        "min": 2,
+        "max": 97
+    },
+    "jumping": {
+        "min": 14,
+        "max": 96
+    },
+    "stamina": {
+        "min": 10,
+        "max": 96
+    },
+    "strength": {
+        "min": 10,
+        "max": 96
+    },
+    "long_shots": {
+        "min": 1,
+        "max": 96
+    },
+    "aggression": {
+        "min": 6,
+        "max": 97
+    },
+    "interceptions": {
+        "min": 1,
+        "max": 96
+    },
+    "positioning": {
+        "min": 2,
+        "max": 96
+    },
+    "vision": {
+        "min": 1,
+        "max": 97
+    },
+    "penalties": {
+        "min": 2,
+        "max": 96
+    },
+    "marking": {
+        "min": 1,
+        "max": 96
+    },
+    "standing_tackle": {
+        "min": 1,
+        "max": 95
+    },
+    "sliding_tackle": {
+        "min": 2,
+        "max": 95
+    },
+    "gk_diving": {
+        "min": 1,
+        "max": 94
+    },
+    "gk_handling": {
+        "min": 1,
+        "max": 93
+    },
+    "gk_kicking": {
+        "min": 1,
+        "max": 97
+    },
+    "gk_positioning": {
+        "min": 1,
+        "max": 96
+    },
+    "gk_reflexes": {
+        "min": 1,
+        "max": 96
+    },
+    "preferred_foot": {
+
+    },
+    "attacking_work_rate" : {
+
+    },
+    "defensive_work_rate" : {
+        
+    }
+}

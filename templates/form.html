@@ -1,0 +1,222 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="player_fifa_api_id">player_fifa_api_id:</label>
+        <input type="text" id="player_fifa_api_id" name="player_fifa_api_id" placeholder="Enter player_fifa_api_id value expected range 2.00 to 234141.0" style="width: 100%;">
+    </div>
+
+    <div class="form-group">
+        <label for="player_api_id">player_api_id:</label>
+        <input type="text" id="player_api_id" name="player_api_id" placeholder="Enter player_api_id value expected range 2625.0 to 750584.0" style="width: 100%;">
+    </div>
+
+    <div class="form-group">  
+        <label for="potential">potential:</label>
+        <input type="text" id="potential" name="potential" placeholder="Enter potential value expected range 39.0 to 97" style="width: 100%;">
+    </div>
+    
+    <div class="form-group">
+        <label for="crossing">crossing:</label>
+        <input type="text" id="crossing" name="crossing" placeholder="Enter crossing value expected range 1.0 to 95.0" style="width: 100%;">
+    </div>
+  
+    <div class="form-group">
+        <label for="finishing">finishing:</label>
+        <input type="text" id="finishing" name="finishing" placeholder="Enter finishing value expected range 1.0 to 97.0" style="width: 100%;">
+    </div>   
+
+    <div class="form-group">
+      <label for="heading_accuracy">heading_accuracy:</label>
+      <input type="text" id="heading_accuracy" name="heading_accuracy" placeholder="Enter heading_accuracy value expected range 1.0 to 98.0" style="width: 100%;">
+  </div>  
+
+    <div class="form-group">
+      <label for="short_passing">short_passing:</label>
+      <input type="text" id="short_passing" name="short_passing" placeholder="Enter short_passing value expected range 3.0 to 97.0" style="width: 100%;">
+    </div>  
+
+    <div class="form-group">
+      <label for="volleys">volleys:</label>
+      <input type="text" id="volleys" name="volleys" placeholder="Enter volleys value expected rangee 1.0 to 93.0" style="width: 100%;">
+    </div>  
+
+    <div class="form-group">
+      <label for="dribbling">dribbling:</label>
+      <input type="text" id="dribbling" name="dribbling" placeholder="Enter dribbling value expected range 1.0 to 97.0" style="width: 100%;">
+    </div>
+
+    <div class="form-group">
+      <label for="curve">curve:</label>
+      <input type="text" id="curve" name="curve" placeholder="Enter curve value expected range 2.0 to 94.0" style="width: 100%;">
+    </div>  
+
+    <div class="form-group">
+      <label for="free_kick_accuracy">free_kick_accuracy:</label>
+      <input type="text" id="free_kick_accuracy" name="free_kick_accuracy" placeholder="Enter free_kick_accuracy value expected range 1.0 to 97.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="long_passing">long_passing:</label>
+      <input type="text" id="long_passing" name="long_passing" placeholder="Enter long_passing value expected range 3.0 to 97.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="ball_control">ball_control:</label>
+      <input type="text" id="ball_control" name="ball_control" placeholder="Enter ball_control value expected range 5.0 to 97.0" style="width: 100%;">
+    </div> 
+    
+    <div class="form-group">
+      <label for="acceleration">acceleration:</label>
+      <input type="text" id="acceleration" name="acceleration" placeholder="Enter acceleration value expected range 10.0 to 97.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="sprint_speed">sprint_speed:</label>
+      <input type="text" id="sprint_speed" name="sprint_speed" placeholder="Enter sprint_speed value expected range 12.0 to 97.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="agility">agility:</label>
+      <input type="text" id="agility" name="agility" placeholder="Enter agility value expected range 11.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="reactions">reactions:</label>
+      <input type="text" id="reactions" name="reactions" placeholder="Enter reactions value expected range 17.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="balance">balance:</label>
+      <input type="text" id="balance" name="balance" placeholder="Enter balance value expected range 12.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="shot_power">shot_power:</label>
+      <input type="text" id="shot_power" name="shot_power" placeholder="Enter shot_power value expected range 2.0 to 97.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="jumping">jumping:</label>
+      <input type="text" id="jumping" name="jumping" placeholder="Enter jumping value expected range 14.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="stamina">stamina:</label>
+      <input type="text" id="stamina" name="stamina" placeholder="Enter stamina value expected range 10.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="strength">strength:</label>
+      <input type="text" id="strength" name="strength" placeholder="Enter strength value expected range 10.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="long_shots">long_shots:</label>
+      <input type="text" id="long_shots" name="long_shots" placeholder="Enter long_shots value expected range 1.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="aggression">aggression:</label>
+      <input type="text" id="aggression" name="aggression" placeholder="Enter aggression value expected range 6.0 to 97.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="interceptions">interceptions:</label>
+      <input type="text" id="interceptions" name="interceptions" placeholder="Enter interceptions value expected range 1.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="positioning">positioning:</label>
+      <input type="text" id="positioning" name="positioning" placeholder="Enter positioning value expected range 2.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="vision">vision:</label>
+      <input type="text" id="vision" name="vision" placeholder="Enter vision value expected range 1.0 to 97.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="penalties">penalties:</label>
+      <input type="text" id="penalties" name="penalties" placeholder="Enter penalties value expected range 2.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="marking">marking:</label>
+      <input type="text" id="marking" name="marking" placeholder="Enter marking value expected range 1.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="standing_tackle">standing_tackle:</label>
+      <input type="text" id="standing_tackle" name="standing_tackle" placeholder="Enter standing_tackle value expected range 1.0 to 95.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="sliding_tackle">sliding_tackle:</label>
+      <input type="text" id="sliding_tackle" name="sliding_tackle" placeholder="Enter sliding_tackle value expected range 2.0 to 95.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="gk_diving">gk_diving:</label>
+      <input type="text" id="gk_diving" name="gk_diving" placeholder="Enter gk_diving value expected range 1.0 to 94.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="gk_handling">gk_handling:</label>
+      <input type="text" id="gk_handling" name="gk_handling" placeholder="Enter gk_handling value expected range 1.0 to 93.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="gk_kicking">gk_kicking:</label>
+      <input type="text" id="gk_kicking" name="gk_kicking" placeholder="Enter gk_kicking value expected range 1.0 to 97.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="gk_positioning">gk_positioning:</label>
+      <input type="text" id="gk_positioning" name="gk_positioning" placeholder="Enter gk_positioning value expected range 1.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    <div class="form-group">
+      <label for="gk_reflexes">gk_reflexes:</label>
+      <input type="text" id="gk_reflexes" name="gk_reflexes" placeholder="Enter gk_reflexes value expected range 1.0 to 96.0" style="width: 100%;">
+    </div> 
+
+    
+
+    <div class="form-group">
+      <label for="preferred_foot">preferred_foot:</label>
+      <select id="preferred_foot" name="preferred_foot">
+        <option value="right">right</option>
+        <option value="left">left</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="attacking_work_rate">attacking_work_rate:</label>
+      <select id="attacking_work_rate" name="attacking_work_rate">
+        <option value="medium">medium</option>
+        <option value="high">high</option>
+        <option value="le">le</option>
+        <option value="norm">norm</option>
+        <option value="stoc">stoc</option>
+        <option value="y">y</option>
+
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="defensive_work_rate">defensive_work_rate:</label>
+      <select id="defensive_work_rate" name="defensive_work_rate">
+        <option value="medium">medium</option>
+        <option value="high">high</option>
+        <option value="low">low</option>
+
+      </select>
+    </div>
+
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
