@@ -30,7 +30,7 @@ class DataIngestion:
             logging.info('Dataset read as pandas Dataframe')
             
             ## Unwanted columns can be deleted here
-            df = df.drop(['id', 'date'], axis=1)
+            df = df.drop(['id', 'date','player_fifa_api_id', 'player_api_id'], axis=1)
             
             # Convert all None values to np.nan
             df = df.where(pd.notnull(df), np.nan)

@@ -2,6 +2,7 @@
 # artifacts/
 logs/
 data/
+EnvInstructions.md
 
 artifacts/raw.csv
 artifacts/test.csv

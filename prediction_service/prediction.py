@@ -70,8 +70,6 @@ def form_response(request):
     if validate_input(request.form):
         print("data validated")
         data=CustomData(
-            player_fifa_api_id=float(request.form.get('player_fifa_api_id')),
-            player_api_id=float(request.form.get('player_api_id')),
             potential=float(request.form.get('potential')),
             crossing=float(request.form.get('crossing')),
             finishing=float(request.form.get('finishing')),
@@ -126,8 +124,6 @@ def api_response(request):
             
             print("data validated")
             data=CustomData(
-            player_fifa_api_id=float(request.form.get('player_fifa_api_id')),
-            player_api_id=float(request.form.get('player_api_id')),
             potential=float(request.form.get('potential')),
             crossing=float(request.form.get('crossing')),
             finishing=float(request.form.get('finishing')),

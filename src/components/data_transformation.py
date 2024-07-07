@@ -46,7 +46,7 @@ class DataTransformation:
             
             ## Data preprocessing
             categorical_features=['preferred_foot', 'attacking_work_rate', 'defensive_work_rate']
-            numerical_features=['player_fifa_api_id', 'player_api_id', 'potential', 'crossing',
+            numerical_features=['potential', 'crossing',
                             'finishing', 'heading_accuracy', 'short_passing', 'volleys',
                             'dribbling', 'curve', 'free_kick_accuracy', 'long_passing',
                             'ball_control', 'acceleration', 'sprint_speed', 'agility', 'reactions',

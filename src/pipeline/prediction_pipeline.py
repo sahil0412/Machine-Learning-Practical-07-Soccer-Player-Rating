@@ -20,7 +20,7 @@ class PredictPipeline:
             model=load_object(model_path)
             
             categorical_features=['preferred_foot', 'attacking_work_rate', 'defensive_work_rate']
-            numerical_features=['player_fifa_api_id', 'player_api_id', 'potential', 'crossing',
+            numerical_features=['potential', 'crossing',
                             'finishing', 'heading_accuracy', 'short_passing', 'volleys',
                             'dribbling', 'curve', 'free_kick_accuracy', 'long_passing',
                             'ball_control', 'acceleration', 'sprint_speed', 'agility', 'reactions',
@@ -57,8 +57,6 @@ class PredictPipeline:
         
 class CustomData:
     def __init__(self,
-                 player_fifa_api_id:float,
-                 player_api_id:float,
                  potential:float,
                  crossing:float,
                  finishing:float,
@@ -98,9 +96,6 @@ class CustomData:
                  attacking_work_rate:str,
                  defensive_work_rate:str
                  ):
-        
-        self.player_fifa_api_id=player_fifa_api_id
-        self.player_api_id=player_api_id
         self.potential=potential
         self.crossing=crossing
         self.finishing=finishing
@@ -144,8 +139,6 @@ class CustomData:
     def get_data_as_dataframe(self):
         try:
             custom_data_input_dict = {
-                'player_fifa_api_id':[self.player_fifa_api_id],
-                'player_api_id':[self.player_api_id],
                 'potential':[self.potential],
                 'crossing':[self.crossing],
                 'finishing':[self.finishing],
